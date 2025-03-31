@@ -1,8 +1,8 @@
 <?php
 
-namespace CodeZero\UriTranslator;
+namespace LaravelToolbox\UriTranslator;
 
-use CodeZero\UriTranslator\Macros\Lang\UriMacro;
+use LaravelToolbox\UriTranslator\Macros\Lang\UriMacro;
 use Illuminate\Support\ServiceProvider;
 
 class UriTranslatorServiceProvider extends ServiceProvider

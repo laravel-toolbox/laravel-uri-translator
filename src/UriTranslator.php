@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeZero\UriTranslator;
+namespace LaravelToolbox\UriTranslator;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Lang;

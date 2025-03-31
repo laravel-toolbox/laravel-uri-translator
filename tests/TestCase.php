@@ -1,8 +1,8 @@
 <?php
 
-namespace CodeZero\UriTranslator\Tests;
+namespace LaravelToolbox\UriTranslator\Tests;
 
-use CodeZero\UriTranslator\UriTranslatorServiceProvider;
+use LaravelToolbox\UriTranslator\UriTranslatorServiceProvider;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Lang;
 use Orchestra\Testbench\TestCase as BaseTestCase;

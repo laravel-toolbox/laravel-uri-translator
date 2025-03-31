@@ -1,5 +1,5 @@
 {
-    "name": "codezero/laravel-uri-translator",
+    "name": "laravel-toolbox/laravel-uri-translator",
     "description": "Translate a URI or individual slugs.",
     "keywords": [
         "php",
@@ -32,18 +32,18 @@
     },
     "autoload": {
         "psr-4": {
-            "CodeZero\\UriTranslator\\": "src"
+            "LaravelToolbox\\UriTranslator\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "CodeZero\\UriTranslator\\Tests\\": "tests"
+            "LaravelToolbox\\UriTranslator\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "CodeZero\\UriTranslator\\UriTranslatorServiceProvider"
+                "LaravelToolbox\\UriTranslator\\UriTranslatorServiceProvider"
             ]
         }
     },

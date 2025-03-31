@@ -1,9 +1,9 @@
 <?php
 
-namespace CodeZero\UriTranslator\Tests\Feature;
+namespace LaravelToolbox\UriTranslator\Tests\Feature;
 
 use PHPUnit\Framework\Attributes\Test;
-use CodeZero\UriTranslator\Tests\TestCase;
+use LaravelToolbox\UriTranslator\Tests\TestCase;
 use Illuminate\Support\Facades\Lang;
 
 final class UriTranslatorTest extends TestCase

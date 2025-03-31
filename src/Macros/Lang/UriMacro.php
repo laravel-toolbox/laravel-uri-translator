@@ -1,8 +1,8 @@
 <?php
 
-namespace CodeZero\UriTranslator\Macros\Lang;
+namespace LaravelToolbox\UriTranslator\Macros\Lang;
 
-use CodeZero\UriTranslator\UriTranslator;
+use LaravelToolbox\UriTranslator\UriTranslator;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Lang;
 
