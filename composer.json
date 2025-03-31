@@ -41,7 +41,9 @@
         }
     },
     "extra": {
-        "branch-alias": "1.x-dev",
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        },
         "laravel": {
             "providers": [
                 "ToolMountain\\UriTranslator\\UriTranslatorServiceProvider"
