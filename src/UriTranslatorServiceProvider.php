@@ -1,8 +1,8 @@
 <?php
 
-namespace LaravelToolbox\UriTranslator;
+namespace ToolMountain\UriTranslator;
 
-use LaravelToolbox\UriTranslator\Macros\Lang\UriMacro;
+use ToolMountain\UriTranslator\Macros\Lang\UriMacro;
 use Illuminate\Support\ServiceProvider;
 
 class UriTranslatorServiceProvider extends ServiceProvider

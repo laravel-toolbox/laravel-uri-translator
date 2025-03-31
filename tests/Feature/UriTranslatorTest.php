@@ -1,9 +1,9 @@
 <?php
 
-namespace LaravelToolbox\UriTranslator\Tests\Feature;
+namespace ToolMountain\UriTranslator\Tests\Feature;
 
 use PHPUnit\Framework\Attributes\Test;
-use LaravelToolbox\UriTranslator\Tests\TestCase;
+use ToolMountain\UriTranslator\Tests\TestCase;
 use Illuminate\Support\Facades\Lang;
 
 final class UriTranslatorTest extends TestCase

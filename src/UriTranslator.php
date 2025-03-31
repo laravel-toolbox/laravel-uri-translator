@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelToolbox\UriTranslator;
+namespace ToolMountain\UriTranslator;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Lang;

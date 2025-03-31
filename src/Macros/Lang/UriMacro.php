@@ -1,8 +1,8 @@
 <?php
 
-namespace LaravelToolbox\UriTranslator\Macros\Lang;
+namespace ToolMountain\UriTranslator\Macros\Lang;
 
-use LaravelToolbox\UriTranslator\UriTranslator;
+use ToolMountain\UriTranslator\UriTranslator;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Lang;
 

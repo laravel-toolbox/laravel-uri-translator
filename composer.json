@@ -1,5 +1,5 @@
 {
-    "name": "laravel-toolbox/laravel-uri-translator",
+    "name": "tool-mountain/laravel-uri-translator",
     "description": "Translate a URI or individual slugs.",
     "keywords": [
         "php",
@@ -32,19 +32,19 @@
     },
     "autoload": {
         "psr-4": {
-            "LaravelToolbox\\UriTranslator\\": "src"
+            "ToolMountain\\UriTranslator\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "LaravelToolbox\\UriTranslator\\Tests\\": "tests"
+            "ToolMountain\\UriTranslator\\Tests\\": "tests"
         }
     },
     "extra": {
         "branch-alias": "1.x-dev",
         "laravel": {
             "providers": [
-                "LaravelToolbox\\UriTranslator\\UriTranslatorServiceProvider"
+                "ToolMountain\\UriTranslator\\UriTranslatorServiceProvider"
             ]
         }
     },

@@ -1,8 +1,8 @@
 <?php
 
-namespace LaravelToolbox\UriTranslator\Tests;
+namespace ToolMountain\UriTranslator\Tests;
 
-use LaravelToolbox\UriTranslator\UriTranslatorServiceProvider;
+use ToolMountain\UriTranslator\UriTranslatorServiceProvider;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Lang;
 use Orchestra\Testbench\TestCase as BaseTestCase;
