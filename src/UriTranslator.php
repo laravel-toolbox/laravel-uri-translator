@@ -1,20 +1,21 @@
 <?php
 
+declare(strict_types=1);
+
 namespace ToolMountain\UriTranslator;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\Str;
 
-class UriTranslator
+final class UriTranslator
 {
     /**
      * Translate a URI.
      *
-     * @param string $uri
-     * @param string|null $locale
-     * @param string|null $namespace
-     *
+     * @param  string  $uri
+     * @param  string|null  $locale
+     * @param  string|null  $namespace
      * @return string
      */
     public function translate($uri, $locale = null, $namespace = null)
@@ -35,7 +36,7 @@ class UriTranslator
 
             // If the segment is not a placeholder and the segment
             // has a translation, then update the segment.
-            if ( ! Str::startsWith($segment, '{') && Lang::has($segmentKey, $locale)) {
+            if (! Str::startsWith($segment, '{') && Lang::has($segmentKey, $locale)) {
                 $segment = Lang::get($segmentKey, [], $locale);
             }
 
@@ -49,9 +50,8 @@ class UriTranslator
     /**
      * Split the URI into a Collection of segments.
      *
-     * @param string $uri
-     *
-     * @return \Illuminate\Support\Collection
+     * @param  string  $uri
+     * @return Collection
      */
     protected function splitUriIntoSegments($uri)
     {
@@ -64,9 +64,8 @@ class UriTranslator
     /**
      * Build a translation key, including the namespace and file name.
      *
-     * @param string $key
-     * @param string|null $namespace
-     *
+     * @param  string  $key
+     * @param  string|null  $namespace
      * @return string
      */
     protected function buildTranslationKey($key, $namespace)

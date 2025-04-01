@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace ToolMountain\UriTranslator\Macros\Lang;
 
-use ToolMountain\UriTranslator\UriTranslator;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Lang;
+use ToolMountain\UriTranslator\UriTranslator;
 
-class UriMacro
+final class UriMacro
 {
     /**
      * Register the macro.

@@ -1,11 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace ToolMountain\UriTranslator;
 
-use ToolMountain\UriTranslator\Macros\Lang\UriMacro;
 use Illuminate\Support\ServiceProvider;
+use ToolMountain\UriTranslator\Macros\Lang\UriMacro;
 
-class UriTranslatorServiceProvider extends ServiceProvider
+final class UriTranslatorServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
