@@ -22,11 +22,11 @@ final class UriTranslatorTest extends TestCase
         ]);
 
         $this->setAppLocale('en');
-        $this->assertEquals('my/new/page', Lang::uri('my/new/page'));
+        $this->assertSame('my/new/page', Lang::uri('my/new/page'));
 
         $this->setAppLocale('nl');
-        $this->assertEquals('mijn/nieuwe/pagina', Lang::uri('my/new/page'));
-        $this->assertEquals('mijn/nieuwe/pagina', trans()->uri('my/new/page'));
+        $this->assertSame('mijn/nieuwe/pagina', Lang::uri('my/new/page'));
+        $this->assertSame('mijn/nieuwe/pagina', trans()->uri('my/new/page'));
     }
 
     #[Test]
@@ -40,7 +40,7 @@ final class UriTranslatorTest extends TestCase
             ],
         ]);
 
-        $this->assertEquals('mijn/nieuwe/pagina', Lang::uri('my/new/page', 'nl'));
+        $this->assertSame('mijn/nieuwe/pagina', Lang::uri('my/new/page', 'nl'));
     }
 
     #[Test]
@@ -53,8 +53,8 @@ final class UriTranslatorTest extends TestCase
             ],
         ]);
 
-        $this->assertEquals('mijn/nieuwe/page', Lang::uri('my/new/page', 'nl'));
-        $this->assertEquals('my/new/page', Lang::uri('my/new/page', 'fr'));
+        $this->assertSame('mijn/nieuwe/page', Lang::uri('my/new/page', 'nl'));
+        $this->assertSame('my/new/page', Lang::uri('my/new/page', 'fr'));
     }
 
     #[Test]
@@ -68,7 +68,7 @@ final class UriTranslatorTest extends TestCase
             ],
         ]);
 
-        $this->assertEquals('mijn/nieuwe/pagina', Lang::uri('/my/new/page/', 'nl'));
+        $this->assertSame('mijn/nieuwe/pagina', Lang::uri('/my/new/page/', 'nl'));
     }
 
     #[Test]
@@ -80,7 +80,7 @@ final class UriTranslatorTest extends TestCase
             ],
         ]);
 
-        $this->assertEquals('artikels/{articles}', Lang::uri('articles/{articles}', 'nl'));
+        $this->assertSame('artikels/{articles}', Lang::uri('articles/{articles}', 'nl'));
     }
 
     #[Test]
@@ -94,7 +94,7 @@ final class UriTranslatorTest extends TestCase
             ],
         ]);
 
-        $this->assertEquals('producten/glazen', Lang::uri('products/glass', 'nl'));
+        $this->assertSame('producten/glazen', Lang::uri('products/glass', 'nl'));
     }
 
     #[Test]
@@ -108,7 +108,7 @@ final class UriTranslatorTest extends TestCase
             ],
         ]);
 
-        $this->assertEquals('producten/glazen/{type}', Lang::uri('products/glass/{type}', 'nl'));
+        $this->assertSame('producten/glazen/{type}', Lang::uri('products/glass/{type}', 'nl'));
     }
 
     #[Test]
@@ -120,7 +120,7 @@ final class UriTranslatorTest extends TestCase
             ],
         ], 'blog');
 
-        $this->assertEquals('artikels/{article}', Lang::uri('articles/{article}', 'nl', 'blog'));
+        $this->assertSame('artikels/{article}', Lang::uri('articles/{article}', 'nl', 'blog'));
     }
 
     #[Test]
@@ -135,9 +135,9 @@ final class UriTranslatorTest extends TestCase
         ]);
 
         $this->setAppLocale('en');
-        $this->assertEquals('my/new/page', trans()->uri('my/new/page'));
+        $this->assertSame('my/new/page', trans()->uri('my/new/page'));
 
         $this->setAppLocale('nl');
-        $this->assertEquals('mijn/nieuwe/pagina', trans()->uri('my/new/page'));
+        $this->assertSame('mijn/nieuwe/pagina', trans()->uri('my/new/page'));
     }
 }
