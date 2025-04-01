@@ -12,13 +12,8 @@ final class UriTranslator
 {
     /**
      * Translate a URI.
-     *
-     * @param  string  $uri
-     * @param  string|null  $locale
-     * @param  string|null  $namespace
-     * @return string
      */
-    public function translate($uri, $locale = null, $namespace = null)
+    public function translate(string $uri, ?string $locale = null, ?string $namespace = null): string
     {
         $fullUriKey = $this->buildTranslationKey($uri, $namespace);
 
@@ -49,11 +44,8 @@ final class UriTranslator
 
     /**
      * Split the URI into a Collection of segments.
-     *
-     * @param  string  $uri
-     * @return Collection
      */
-    protected function splitUriIntoSegments($uri)
+    protected function splitUriIntoSegments(string $uri): Collection
     {
         $uri = trim($uri, '/');
         $segments = explode('/', $uri);
@@ -63,12 +55,8 @@ final class UriTranslator
 
     /**
      * Build a translation key, including the namespace and file name.
-     *
-     * @param  string  $key
-     * @param  string|null  $namespace
-     * @return string
      */
-    protected function buildTranslationKey($key, $namespace)
+    protected function buildTranslationKey(string $key, ?string $namespace): string
     {
         $namespace = $namespace ? "{$namespace}::" : '';
         $file = $this->getTranslationFileName();
@@ -78,10 +66,8 @@ final class UriTranslator
 
     /**
      * Get the file name that holds the URI translations.
-     *
-     * @return string
      */
-    protected function getTranslationFileName()
+    protected function getTranslationFileName(): string
     {
         return 'routes';
     }

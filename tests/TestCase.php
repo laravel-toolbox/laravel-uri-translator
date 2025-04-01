@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace ToolMountain\UriTranslator\Tests;
 
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Lang;
 use Orchestra\Testbench\TestCase as BaseTestCase;
@@ -13,11 +14,8 @@ abstract class TestCase extends BaseTestCase
 {
     /**
      * Set the app locale.
-     *
-     * @param  string  $locale
-     * @return void
      */
-    protected function setAppLocale($locale)
+    protected function setAppLocale(string $locale): void
     {
         App::setLocale($locale);
     }
@@ -25,11 +23,8 @@ abstract class TestCase extends BaseTestCase
     /**
      * Fake that we created a routes.php file in the 'lang' folder
      * for each language with the given translations.
-     *
-     * @param  string  $namespace
-     * @return void
      */
-    protected function setTranslations($translations, $namespace = '*')
+    protected function setTranslations(array $translations, string $namespace = '*'): void
     {
         Lang::setLoaded([
             $namespace => [
@@ -41,10 +36,9 @@ abstract class TestCase extends BaseTestCase
     /**
      * Get the packages service providers.
      *
-     * @param  \Illuminate\Foundation\Application  $app
-     * @return array
+     * @param  Application  $app
      */
-    protected function getPackageProviders($app)
+    protected function getPackageProviders($app): array
     {
         return [
             UriTranslatorServiceProvider::class,
