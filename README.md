@@ -105,7 +105,7 @@ composer test
 ```
 ## ☕️ Credits
 
-- [Ivan Vermeyen](https://github.com/ivanvermeyen)
+- [Ivan Vermeyen](https://github.com/ivanvermeyen) [†](https://github.com/codezero-be/laravel-uri-translator/pull/2#issuecomment-2747179649)
 - [All contributors](https://github.com/tool-mountain/laravel-uri-translator/contributors)
 
 ## 🔒 Security
