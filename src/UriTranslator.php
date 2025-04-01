@@ -68,7 +68,7 @@ final class UriTranslator
      * @param  string|null  $namespace
      * @return string
      */
-    protected function buildTranslationKey($key, $namespace)
+    protected function buildTranslationKey($key, $namespace): string
     {
         $namespace = $namespace ? "{$namespace}::" : '';
         $file = $this->getTranslationFileName();
@@ -81,7 +81,7 @@ final class UriTranslator
      *
      * @return string
      */
-    protected function getTranslationFileName()
+    protected function getTranslationFileName(): string
     {
         return 'routes';
     }

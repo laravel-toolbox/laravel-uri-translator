@@ -15,10 +15,8 @@ final class UriMacro
      *
      * @return void
      */
-    public static function register()
+    public static function register(): void
     {
-        Lang::macro('uri', function ($uri, $locale = null, $namespace = null) {
-            return App::make(UriTranslator::class)->translate($uri, $locale, $namespace);
-        });
+        Lang::macro('uri', fn($uri, $locale = null, $namespace = null) => App::make(UriTranslator::class)->translate($uri, $locale, $namespace));
     }
 }

@@ -14,7 +14,7 @@ final class UriTranslatorServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         UriMacro::register();
     }
@@ -24,7 +24,7 @@ final class UriTranslatorServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         //
     }
