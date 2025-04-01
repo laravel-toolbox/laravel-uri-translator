@@ -17,6 +17,10 @@
         {
             "name": "Ivan Vermeyen",
             "email": "ivan@codezero.be"
+        },
+        {
+            "name": "Roj Vroemen",
+            "email": "roj@vroe.men"
         }
     ],
     "require": {
