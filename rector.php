@@ -41,6 +41,7 @@ use Rector\TypeDeclaration\Rector\ClassMethod\StrictArrayParamDimFetchRector;
 use Rector\TypeDeclaration\Rector\ClassMethod\StrictStringParamConcatRector;
 use Rector\TypeDeclaration\Rector\ClassMethod\StringReturnTypeFromStrictScalarReturnsRector;
 use Rector\TypeDeclaration\Rector\ClassMethod\StringReturnTypeFromStrictStringReturnsRector;
+use Rector\TypeDeclaration\Rector\Closure\AddClosureVoidReturnTypeWhereNoReturnRector;
 use Rector\TypeDeclaration\Rector\Empty_\EmptyOnNullableObjectToInstanceOfRector;
 use Rector\TypeDeclaration\Rector\Function_\AddFunctionVoidReturnTypeWhereNoReturnRector;
 use Rector\TypeDeclaration\Rector\FunctionLike\AddParamTypeSplFixedArrayRector;
@@ -55,51 +56,10 @@ return RectorConfig::configure()
         __DIR__.'/tests/',
     ])
     ->withRules([
-        AddFunctionVoidReturnTypeWhereNoReturnRector::class,
-        AddTestsVoidReturnTypeWhereNoReturnRector::class,
-        ReturnTypeFromMockObjectRector::class,
-        TypedPropertyFromCreateMockAssignRector::class,
-        BoolReturnTypeFromBooleanConstReturnsRector::class,
-        ReturnTypeFromStrictNewArrayRector::class,
-        ReturnTypeFromStrictConstantReturnRector::class,
-        StringReturnTypeFromStrictScalarReturnsRector::class,
-        NumericReturnTypeFromStrictScalarReturnsRector::class,
-        BoolReturnTypeFromBooleanStrictReturnsRector::class,
-        StringReturnTypeFromStrictStringReturnsRector::class,
-        NumericReturnTypeFromStrictReturnsRector::class,
-        ReturnTypeFromStrictTernaryRector::class,
-        ReturnTypeFromReturnDirectArrayRector::class,
-        ResponseReturnTypeControllerActionRector::class,
-        ReturnTypeFromReturnNewRector::class,
-        ReturnTypeFromReturnCastRector::class,
-        ReturnTypeFromSymfonySerializerRector::class,
         AddVoidReturnTypeWhereNoReturnRector::class,
-        ReturnTypeFromStrictTypedPropertyRector::class,
-        ReturnNullableTypeRector::class,
-        EmptyOnNullableObjectToInstanceOfRector::class,
-        TypedPropertyFromStrictConstructorRector::class,
-        AddParamTypeSplFixedArrayRector::class,
-        AddReturnTypeDeclarationFromYieldsRector::class,
-        AddParamTypeBasedOnPHPUnitDataProviderRector::class,
-        TypedPropertyFromStrictSetUpRector::class,
-        ReturnTypeFromStrictNativeCallRector::class,
-        ReturnTypeFromStrictTypedCallRector::class,
-        ChildDoctrineRepositoryClassTypeRector::class,
-        AddMethodCallBasedStrictParamTypeRector::class,
-        ParamTypeByParentCallTypeRector::class,
-        ReturnUnionTypeRector::class,
-        ReturnTypeFromStrictParamRector::class,
-        AddParamTypeFromPropertyTypeRector::class,
-        MergeDateTimePropertyTypeDeclarationRector::class,
-        PropertyTypeFromStrictSetterGetterRector::class,
-        ParamTypeByMethodCallTypeRector::class,
-        TypedPropertyFromAssignsRector::class,
-        AddReturnTypeDeclarationBasedOnParentClassMethodRector::class,
-        ReturnTypeFromStrictFluentReturnRector::class,
-        ReturnNeverTypeRector::class,
-        StrictArrayParamDimFetchRector::class,
-        StrictStringParamConcatRector::class,
-        TypedPropertyFromJMSSerializerAttributeTypeRector::class,
+        AddTestsVoidReturnTypeWhereNoReturnRector::class,
+        AddFunctionVoidReturnTypeWhereNoReturnRector::class,
+        AddClosureVoidReturnTypeWhereNoReturnRector::class,
     ])
     ->withPhpSets(php82: true)
     ->withDeadCodeLevel(10)
