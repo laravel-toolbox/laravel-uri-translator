@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace ToolMountain\UriTranslator\Tests\Feature;
 
+use Illuminate\Support\Facades\Lang;
 use PHPUnit\Framework\Attributes\Test;
 use ToolMountain\UriTranslator\Tests\TestCase;
-use Illuminate\Support\Facades\Lang;
 
 final class UriTranslatorTest extends TestCase
 {
@@ -16,7 +18,7 @@ final class UriTranslatorTest extends TestCase
                 'my' => 'mijn',
                 'new' => 'nieuwe',
                 'page' => 'pagina',
-            ]
+            ],
         ]);
 
         $this->setAppLocale('en');
@@ -35,7 +37,7 @@ final class UriTranslatorTest extends TestCase
                 'my' => 'mijn',
                 'new' => 'nieuwe',
                 'page' => 'pagina',
-            ]
+            ],
         ]);
 
         $this->assertEquals('mijn/nieuwe/pagina', Lang::uri('my/new/page', 'nl'));
@@ -48,7 +50,7 @@ final class UriTranslatorTest extends TestCase
             'nl' => [
                 'my' => 'mijn',
                 'new' => 'nieuwe',
-            ]
+            ],
         ]);
 
         $this->assertEquals('mijn/nieuwe/page', Lang::uri('my/new/page', 'nl'));
@@ -63,7 +65,7 @@ final class UriTranslatorTest extends TestCase
                 'my' => 'mijn',
                 'new' => 'nieuwe',
                 'page' => 'pagina',
-            ]
+            ],
         ]);
 
         $this->assertEquals('mijn/nieuwe/pagina', Lang::uri('/my/new/page/', 'nl'));
@@ -75,7 +77,7 @@ final class UriTranslatorTest extends TestCase
         $this->setTranslations([
             'nl' => [
                 'articles' => 'artikels',
-            ]
+            ],
         ]);
 
         $this->assertEquals('artikels/{articles}', Lang::uri('articles/{articles}', 'nl'));
@@ -86,10 +88,10 @@ final class UriTranslatorTest extends TestCase
     {
         $this->setTranslations([
             'nl' => [
-                'glass'          => 'glas',
-                'products'       => 'producten',
-                'products/glass' => 'producten/glazen'
-            ]
+                'glass' => 'glas',
+                'products' => 'producten',
+                'products/glass' => 'producten/glazen',
+            ],
         ]);
 
         $this->assertEquals('producten/glazen', Lang::uri('products/glass', 'nl'));
@@ -100,10 +102,10 @@ final class UriTranslatorTest extends TestCase
     {
         $this->setTranslations([
             'nl' => [
-                'glass'                => 'glas',
-                'products'             => 'producten',
-                'products/glass/{type}' => 'producten/glazen/{type}'
-            ]
+                'glass' => 'glas',
+                'products' => 'producten',
+                'products/glass/{type}' => 'producten/glazen/{type}',
+            ],
         ]);
 
         $this->assertEquals('producten/glazen/{type}', Lang::uri('products/glass/{type}', 'nl'));
@@ -115,7 +117,7 @@ final class UriTranslatorTest extends TestCase
         $this->setTranslations([
             'nl' => [
                 'articles' => 'artikels',
-            ]
+            ],
         ], 'blog');
 
         $this->assertEquals('artikels/{article}', Lang::uri('articles/{article}', 'nl', 'blog'));
@@ -129,7 +131,7 @@ final class UriTranslatorTest extends TestCase
                 'my' => 'mijn',
                 'new' => 'nieuwe',
                 'page' => 'pagina',
-            ]
+            ],
         ]);
 
         $this->setAppLocale('en');
