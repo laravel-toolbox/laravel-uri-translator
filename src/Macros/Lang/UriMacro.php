@@ -12,11 +12,9 @@ final class UriMacro
 {
     /**
      * Register the macro.
-     *
-     * @return void
      */
     public static function register(): void
     {
-        Lang::macro('uri', fn($uri, $locale = null, $namespace = null) => App::make(UriTranslator::class)->translate($uri, $locale, $namespace));
+        Lang::macro('uri', fn ($uri, $locale = null, $namespace = null) => App::make(UriTranslator::class)->translate($uri, $locale, $namespace));
     }
 }

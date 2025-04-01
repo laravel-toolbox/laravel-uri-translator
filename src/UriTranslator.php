@@ -66,7 +66,6 @@ final class UriTranslator
      *
      * @param  string  $key
      * @param  string|null  $namespace
-     * @return string
      */
     protected function buildTranslationKey($key, $namespace): string
     {
@@ -78,8 +77,6 @@ final class UriTranslator
 
     /**
      * Get the file name that holds the URI translations.
-     *
-     * @return string
      */
     protected function getTranslationFileName(): string
     {
